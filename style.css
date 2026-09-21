@@ -1,44 +1,154 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap');
-
 body {
-  background-color: #08070F;
-  color: #CBC7DD;
-  font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  background-color: #ECECEC;
+  color: #000000;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 15px;
-  max-width: 1100px;
+  max-width: 760px;
   margin: 0 auto;
-  padding: 40px 24px;
-  line-height: 1.7;
+  padding: 24px 16px 48px;
+  line-height: 1.6;
 }
 
 p {
-  max-width: 78ch;
+  max-width: 60ch;
+}
+
+h1,
+h2 {
+  font-weight: bold;
 }
 
 h1 {
-  font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  color: #C084FC;
+  font-size: 16px;
 }
 
 h2 {
-  font-size: 13px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: #C084FC;
+  font-size: 14px;
 }
 
 a {
-  color: #FF9E3D;
+  color: #0000EE;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #551A8B;
+}
+
+nav {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #999999;
+  margin: 20px 0;
+}
+
+hr.ornament {
+  width: 120px;
+  margin: 28px auto;
+}
+
+.topbar {
+  display: flex;
+  align-items: stretch;
+  height: 26px;
+  margin: 12px 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.logo {
+  display: flex;
+  flex: none;
+}
+
+.logo span {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.logo-dark {
+  background: #000000;
+  color: #ffffff;
+}
+
+.logo-light {
+  background: #ffffff;
+  color: #000000;
+}
+
+.gradient-strip {
+  flex: 1;
+  background: linear-gradient(to right, #cccccc, #000000);
+}
+
+.intro {
+  display: flex;
+  gap: 32px;
+  margin: 24px 0;
+}
+
+.intro-teasers {
+  flex: 0 0 180px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  color: #444444;
+}
+
+.intro-teasers p {
+  margin: 0 0 28px;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.entry {
+  display: flex;
+  gap: 32px;
+  margin: 24px 0;
+}
+
+.entry-meta {
+  flex: 0 0 180px;
+}
+
+.entry-meta h2 {
+  margin: 0 0 4px;
+}
+
+.entry-date {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  color: #666666;
+}
+
+.entry-text {
+  flex: 1;
 }
 
 .carimbo {
+  font-family: "Courier New", Courier, monospace;
   font-size: 11px;
-  color: #6B6580;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-top: 40px;
+  color: #666666;
+}
+
+@media (max-width: 560px) {
+  .intro,
+  .entry {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .intro-teasers,
+  .intro-text,
+  .entry-meta,
+  .entry-text {
+    flex: none;
+  }
 }
