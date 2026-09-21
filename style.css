@@ -1,13 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap');
+
 body {
   background-color: #08070F;
   color: #CBC7DD;
-  font-family: "Courier New", Courier, monospace;
-font-size: 14px;
-max-width: 65ch;
-margin: 0 auto;
-padding: 24px;
-line-height: 1.5;
+  font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  font-size: 15px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  line-height: 1.7;
 }
-a { 
-color: #00E5FF;
-  }
+
+p {
+  max-width: 78ch;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #C084FC;
+}
+
+h2 {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #C084FC;
+}
+
+a {
+  color: #FF9E3D;
+}
