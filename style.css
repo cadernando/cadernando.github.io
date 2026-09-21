@@ -52,34 +52,19 @@ hr.ornament {
 }
 
 .topbar {
-  display: flex;
-  align-items: stretch;
-  height: 26px;
   margin: 12px 0;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 13px;
+}
+
+.site-title {
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  margin: 0;
 }
 
-.logo {
-  display: flex;
-  flex: none;
-}
-
-.logo span {
-  display: flex;
-  align-items: center;
-  padding: 0 10px;
-}
-
-.logo-dark {
-  background: #000000;
-  color: #ffffff;
-}
-
-.logo-light {
-  background: #ffffff;
-  color: #000000;
+.site-title.small {
+  font-size: 14px;
 }
 
 .intro {
