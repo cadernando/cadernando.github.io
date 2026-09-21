@@ -1,0 +1,9 @@
+body {
+  background-color: #0f0506;
+  color: #dbd5ca;
+  font-family: "Times New Roman", Georgia, serif;
+  max-width: 65ch;
+  margin: 0 auto;
+  padding: 24px;
+  line-height: 1.5;
+}
