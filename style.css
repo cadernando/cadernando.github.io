@@ -82,11 +82,6 @@ hr.ornament {
   color: #000000;
 }
 
-.gradient-strip {
-  flex: 1;
-  background: linear-gradient(to right, #cccccc, #000000);
-}
-
 .intro {
   display: flex;
   gap: 32px;
