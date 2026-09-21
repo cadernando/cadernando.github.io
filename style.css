@@ -1,9 +1,13 @@
 body {
-  background-color: #0f0506;
-  color: #dbd5ca;
- font-family: "Courier New", Courier, monospace;
-  max-width: 65ch;
-  margin: 0 auto;
-  padding: 24px;
-  line-height: 1.5;
+  background-color: #08070F
+  color: #CBC7DD
+  font-family: "Courier New", Courier, monospace;
+font-size: 14px;
+max-width: 65ch;
+margin: 0 auto;
+padding: 24px;
+line-height: 1.5;
 }
+a { 
+color: #00E5FF;
+  }
