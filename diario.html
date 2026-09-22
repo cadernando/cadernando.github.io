@@ -11,7 +11,7 @@
 <body>
 
   <header class="topbar">
-    <p class="site-title">meu caderno</p>
+    <p class="site-title">diário</p>
   </header>
 
   <nav>
@@ -20,11 +20,54 @@
     [ <a href="diario.html">diário</a> ]
   </nav>
 
-  <footer class="topbar">
+  <aside class="signature-widget">
     <p class="site-title small">cadernando.com</p>
-  </footer>
+    <p class="carimbo">cadernando.com :: v1.0 :: <span id="now-carimbo-date">22.09.2026</span></p>
+  </aside>
 
-  <p class="carimbo">cadernando.com :: v1.0 :: 21.09.2026</p>
+  <aside class="now-widget">
+    <div class="now-widget-label">agora <span id="now-date">22.09.2026</span></div>
+    <div>lendo :: <span id="now-lendo">Morangos mofados - Caio Fernando Abreu</span></div>
+    <div>ouvindo :: <span id="now-ouvindo">Teardrop - Massive Attack, Elizabeth Fraser</span></div>
+  </aside>
+
+  <script>
+    (function () {
+      var ENDPOINT = "https://cadernando-now-api.pontojf.workers.dev/";
+      var POLL_MS = 30000;
+
+      function formatDate(iso) {
+        var d = new Date(iso);
+        var dd = String(d.getDate()).padStart(2, "0");
+        var mm = String(d.getMonth() + 1).padStart(2, "0");
+        return dd + "." + mm + "." + d.getFullYear();
+      }
+
+      function setText(id, text) {
+        var el = document.getElementById(id);
+        if (el && text) el.textContent = text;
+      }
+
+      function refresh() {
+        fetch(ENDPOINT)
+          .then(function (res) { return res.ok ? res.json() : null; })
+          .then(function (data) {
+            if (!data) return;
+            setText("now-ouvindo", data.listening);
+            setText("now-lendo", data.reading);
+            if (data.updated) {
+              var date = formatDate(data.updated);
+              setText("now-date", date);
+              setText("now-carimbo-date", date);
+            }
+          })
+          .catch(function () { /* mantém o último valor commitado */ });
+      }
+
+      refresh();
+      setInterval(refresh, POLL_MS);
+    })();
+  </script>
 
 </body>
 
