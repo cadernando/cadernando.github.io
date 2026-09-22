@@ -46,11 +46,6 @@ hr {
   margin: 20px 0;
 }
 
-hr.ornament {
-  width: 120px;
-  margin: 28px auto;
-}
-
 .topbar {
   margin: 12px 0;
 }
@@ -88,28 +83,32 @@ hr.ornament {
   flex: 1;
 }
 
-.entry {
-  display: flex;
-  gap: 32px;
-  margin: 24px 0;
-}
-
-.entry-meta {
-  flex: 0 0 180px;
-}
-
-.entry-meta h2 {
-  margin: 0 0 4px;
-}
-
-.entry-date {
+.now-widget {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  max-width: 220px;
+  background: #ECECEC;
+  border: 1px solid #999999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  padding: 10px 12px;
   font-family: "Courier New", Courier, monospace;
-  font-size: 12px;
-  color: #666666;
+  font-size: 11px;
+  line-height: 1.6;
 }
 
-.entry-text {
-  flex: 1;
+.now-widget-label {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.now-widget-label span {
+  font-weight: normal;
+  text-transform: none;
+  color: #666666;
+  margin-left: 4px;
 }
 
 .carimbo {
@@ -119,16 +118,19 @@ hr.ornament {
 }
 
 @media (max-width: 560px) {
-  .intro,
-  .entry {
+  .intro {
     flex-direction: column;
     gap: 8px;
   }
 
   .intro-teasers,
-  .intro-text,
-  .entry-meta,
-  .entry-text {
+  .intro-text {
     flex: none;
+  }
+
+  .now-widget {
+    position: static;
+    max-width: none;
+    margin: 32px 0 0;
   }
 }
