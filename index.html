@@ -10,9 +10,7 @@
 
 <body>
 
-  <div id="entrance">
-    <span class="entrance-hint">clique para entrar</span>
-  </div>
+  <div id="entrance" aria-hidden="true"></div>
 
   <header class="topbar">
     <p class="site-title">meu caderno</p>
@@ -75,12 +73,12 @@
     (function () {
       var entrance = document.getElementById("entrance");
       if (!entrance) return;
-      entrance.addEventListener("click", function () {
+      setTimeout(function () {
         entrance.classList.add("entrance-open");
         setTimeout(function () {
           entrance.style.display = "none";
-        }, 600);
-      });
+        }, 900);
+      }, 3000);
     })();
   </script>
 

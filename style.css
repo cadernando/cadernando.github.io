@@ -103,26 +103,11 @@ hr {
   inset: 0;
   z-index: 100;
   background: #000000 url("img/entrada.webp") center center / cover no-repeat;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  cursor: pointer;
-  transition: opacity 0.6s ease;
+  transition: opacity 0.9s ease;
 }
 
 #entrance.entrance-open {
   opacity: 0;
-}
-
-.entrance-hint {
-  margin-bottom: 60px;
-  padding: 6px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  color: #ffffff;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 12px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
 }
 
 @media (max-width: 560px) {
