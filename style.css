@@ -102,12 +102,19 @@ hr {
   position: fixed;
   inset: 0;
   z-index: 100;
-  background: #000000 url("img/entrada.webp") center center / cover no-repeat;
+  background: #000000;
   transition: opacity 0.9s ease;
 }
 
 #entrance.entrance-open {
   opacity: 0;
+}
+
+.entrance-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 @media (max-width: 560px) {

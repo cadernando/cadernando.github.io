@@ -10,7 +10,11 @@
 
 <body>
 
-  <div id="entrance" aria-hidden="true"></div>
+  <div id="entrance" aria-hidden="true">
+    <video class="entrance-video" autoplay muted loop playsinline poster="img/entrada.webp">
+      <source src="img/entrada.mp4" type="video/mp4">
+    </video>
+  </div>
 
   <header class="topbar">
     <p class="site-title">meu caderno</p>
@@ -78,7 +82,7 @@
         setTimeout(function () {
           entrance.style.display = "none";
         }, 900);
-      }, 3000);
+      }, 4000);
     })();
   </script>
 
