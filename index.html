@@ -10,6 +10,10 @@
 
 <body>
 
+  <div id="entrance">
+    <span class="entrance-hint">clique para entrar</span>
+  </div>
+
   <header class="topbar">
     <p class="site-title">meu caderno</p>
   </header>
@@ -66,6 +70,17 @@
 
       refresh();
       setInterval(refresh, POLL_MS);
+    })();
+
+    (function () {
+      var entrance = document.getElementById("entrance");
+      if (!entrance) return;
+      entrance.addEventListener("click", function () {
+        entrance.classList.add("entrance-open");
+        setTimeout(function () {
+          entrance.style.display = "none";
+        }, 600);
+      });
     })();
   </script>
 
