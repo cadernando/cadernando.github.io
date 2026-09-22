@@ -113,6 +113,38 @@ hr {
   color: #666666;
 }
 
+.spinner {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  pointer-events: none;
+  animation: spin 2.4s linear infinite;
+}
+
+.spinner-dot {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  margin-left: -2.5px;
+  border-radius: 50%;
+  background: #999999;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (max-width: 560px) {
   .signature-widget {
     position: static;
