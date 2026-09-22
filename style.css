@@ -123,6 +123,20 @@ hr {
   stroke-linecap: round;
 }
 
+.spiral-page {
+  display: flex;
+  justify-content: center;
+  padding: 48px 0;
+}
+
+.fib-spiral-big {
+  position: static;
+  width: min(90vw, 420px);
+  height: auto;
+  aspect-ratio: 14 / 22;
+  margin: 0;
+}
+
 @media (max-width: 560px) {
   .signature-widget {
     position: static;
