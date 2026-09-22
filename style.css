@@ -62,27 +62,6 @@ hr {
   font-size: 14px;
 }
 
-.intro {
-  display: flex;
-  gap: 32px;
-  margin: 24px 0;
-}
-
-.intro-teasers {
-  flex: 0 0 180px;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 12px;
-  color: #444444;
-}
-
-.intro-teasers p {
-  margin: 0 0 28px;
-}
-
-.intro-text {
-  flex: 1;
-}
-
 .now-widget {
   position: fixed;
   right: 20px;
@@ -118,16 +97,6 @@ hr {
 }
 
 @media (max-width: 560px) {
-  .intro {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .intro-teasers,
-  .intro-text {
-    flex: none;
-  }
-
   .now-widget {
     position: static;
     max-width: none;
