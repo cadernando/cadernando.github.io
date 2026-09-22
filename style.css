@@ -64,9 +64,11 @@ hr {
 
 .signature-widget {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  text-align: right;
+  bottom: 20px;
+  left: 20px;
+  text-align: left;
+  opacity: 0.25;
+  pointer-events: none;
 }
 
 .signature-widget .site-title {
@@ -115,6 +117,7 @@ hr {
   .signature-widget {
     position: static;
     text-align: left;
+    opacity: 0.5;
     margin: 24px 0 0;
   }
 
