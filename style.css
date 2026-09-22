@@ -62,6 +62,21 @@ hr {
   font-size: 14px;
 }
 
+.signature-widget {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+}
+
+.signature-widget .site-title {
+  margin: 0;
+}
+
+.signature-widget .carimbo {
+  margin: 2px 0 0;
+}
+
 .now-widget {
   position: fixed;
   right: 20px;
@@ -97,9 +112,15 @@ hr {
 }
 
 @media (max-width: 560px) {
+  .signature-widget {
+    position: static;
+    text-align: left;
+    margin: 24px 0 0;
+  }
+
   .now-widget {
     position: static;
     max-width: none;
-    margin: 32px 0 0;
+    margin: 24px 0 0;
   }
 }
