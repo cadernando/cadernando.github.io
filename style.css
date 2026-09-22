@@ -98,36 +98,29 @@ hr {
   color: #666666;
 }
 
-.spinner {
+.fib-spiral {
   position: fixed;
-  bottom: 30px;
+  bottom: 24px;
   left: 50%;
-  width: 20px;
-  height: 20px;
-  margin-left: -10px;
+  width: 56px;
+  height: 88px;
+  margin-left: -28px;
   pointer-events: none;
-  animation: spin 2.4s linear infinite;
+  overflow: visible;
 }
 
-.spinner-dot {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 5px;
-  height: 5px;
-  margin-left: -2.5px;
-  border-radius: 50%;
-  background: #999999;
+.fib-squares rect {
+  fill: none;
+  stroke: #999999;
+  stroke-width: 0.1;
+  opacity: 0.35;
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.fib-curve {
+  fill: none;
+  stroke: #666666;
+  stroke-width: 0.3;
+  stroke-linecap: round;
 }
 
 @media (max-width: 560px) {
@@ -142,5 +135,10 @@ hr {
     position: static;
     max-width: none;
     margin: 24px 0 0;
+  }
+
+  .fib-spiral {
+    position: static;
+    margin: 32px auto 0;
   }
 }
